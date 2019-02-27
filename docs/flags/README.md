@@ -12,7 +12,7 @@ You may configure flags in a `flags.json` file or pass them via CLI.
 
 ### Configure in `flags.json`
 
-Place a `flags.json` file inside the `{APP_HOME}/resources` or `{USER_DATA}/resources` directory to persist them.
+Place a `flags.json` file inside the `resources` folder of your local [`{USER_DATA}`](../search-paths#user-data-directory) or [`{APP_HOME}`](../search-paths#application-home-directory) directories to persist them.
 
 ### Configure via CLI
 
@@ -32,7 +32,8 @@ Flags passed as command line arguments take precedence over those configured via
   "disable-plugins": false,
   "disable-adjust-origin": false,
   "disable-cmmn": false,
-  "disable-dmn": false
+  "disable-dmn": false,
+  "single-instance": false
 }
 ```
 

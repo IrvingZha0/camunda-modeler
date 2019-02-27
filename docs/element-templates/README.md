@@ -9,21 +9,17 @@ Element templates allow you create pre-defined configurations for BPMN elements 
 
 ## Configuring Templates
 
-Element templates are defined as [JSON files](#defining-templates) and are searched for in the `resources/element-templates` folder, relative to the modelers executable _or_ relative to the modelers data directory (see below).
+Element templates are defined as [JSON files](#defining-templates) and are searched for in the `resources/element-templates` folder, relative to the modelers executable _or_ relative to the modelers data directory ([see below](#example-setup)).
 
-Alternatively, they can be stored in a `.camunda/element-templates` directory that resides, relative to the currently opened diagram, anywhere in the diagrams path hierachy.
+Alternatively, they can be stored in a `.camunda/element-templates` directory that resides, relative to the currently opened diagram, anywhere in the diagrams path hierarchy.
 
 New templates will be recognized on diagram reopen or modeler reload/restart.
 
 
 #### Example Setup
 
-The location of the modelers data directory differs across operating systems:
 
-* **Windows**: `%APPDATA%/camunda-modeler`
-* **Mac OS X**: `~/Library/Application Support/camunda-modeler`
-
-On Mac, add a JSON file to the folder `~/Library/Application Support/camunda-modeler/resources/element-templates`, on Windows use the `%APPDATA%/camunda-modeler/resources/element-templates` folder. You may have to create the `resources` and `element-templates` folders.
+Add a JSON file to the `resources/element-templates` sub-folder of your local [`{APP_HOME}`](../search-paths#application-home-directory) or [`{USER_DATA}`](../search-paths#user-data-directory) directories. You may have to create the `resources` and `element-templates` folders  yourself.
 
 For local template discovery, create a `.camunda/element-templates` folder relative in the directory
 or any parent directory of the diagrams you are editing.
